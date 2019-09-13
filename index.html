@@ -2,18 +2,17 @@
 <html>
     <title>Hospital</title> 
     <head></head>
-    <body>
+    <body background="a.jpg">
         <h1 style="text-align:center; background-color: grey; border-radius: 30px; color: white; font-size: 35px; width: 50%; margin-left: 25%;">Hospital</h1>
           <div class="container">
               <div class="row">
-                  <div class="col-md-12" style="background-color: grey;">
-                      <h1 style="text-align: center; color: white; ">Medicos</h1>
-                      <table class="table" id="tabelaMedico">
-                          <tr style="font-size: 20px; color:white;">
-                              <th>Código</th>
-                              <th>Nome</th>
-                              <th>CPF</th>
-                              <th>CRM</th>
+                  <div class="col-md-12">
+                      <table class="table">
+                          <tr>
+                                <th>Código</th>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>COREN</th>
                           </tr>
                           <tr>
                             <td id="codMedico"></td>
@@ -22,13 +21,14 @@
                             <td id="crm"></td>
                         </tr>
                       </table>
+                      
+
                   </div>
               </div>
               <div class="row">
-                    <div class="col-md-12" style="background-color: grey;">
-                        <h1 style="text-align: center; color: white; ">Enfermeiros</h1>
-                        <table class="table" id="tabelaEnfermeiro">
-                            <tr style="font-size: 20px; color:white;">
+                    <div class="col-md-12">
+                        <table class="table" >
+                            <tr>
                                 <th>Código</th>
                                 <th>Nome</th>
                                 <th>CPF</th>
@@ -43,11 +43,11 @@
                         </table>
                     </div>
                 </div>
+              
                 <div class="row">
-                        <div class="col-md-12" style="background-color: grey;">
-                            <h1 style="text-align: center; color: white; ">Pacientes</h1>
-                            <table class="table" id="tabelaPaciente">
-                                <tr style="font-size: 20px; color:white;">
+                        <div class="col-md-12" >
+                            <table class="table">
+                                <tr>
                                     <th>Código</th>
                                     <th>Nome</th>
                                     <th>CPF</th>
@@ -60,27 +60,27 @@
                             </table>
                         </div>
                     </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <table class="table" id="">
-
-                        </table>
+                    <div class="row">
+                            <div class="col-md-12">
+                              <table class="table" id="tabelaPaciente">
+        
+                              </table>
+                            </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-md-12">
+                          <table class="table"id="tabelaEnfermeiro">
+    
+                          </table>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <table class="table" id="">
-                            
-                        </table>
+                    <div class="row">
+                            <div class="col-md-12">
+                              <table class="table" id="tabelaMedico">
+  
+                              </table>
+                            </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <table class="table" id="">
-                            
-                        </table>
-                    </div>
-                </div>
           </div>
     </body>
     <script src="tudo.js"></script>

@@ -1,6 +1,3 @@
-///<reference path="enfermeiro.ts"/>
-///<reference path="paciente.ts"/>
-///<reference path="medico.ts"/>
 var hospital;
 (function (hospital) {
     var Hospital = /** @class */ (function () {
@@ -29,6 +26,9 @@ var hospital;
         };
         Hospital.prototype.addPacientes = function (paciente) {
             this._pacientes.push(paciente);
+        };
+        Hospital.prototype.getPacientes = function () {
+            return this._pacientes;
         };
         return Hospital;
     }());

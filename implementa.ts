@@ -34,15 +34,15 @@ namespace hospital{
     medico.setCrm(213);
 
     let medico1 = new Medico();
-    medico1.setFuncionario(4);
+    medico1.setFuncionario(5);
     medico1.setNome("Cassie Lang");
     medico1.setCpf("333.333.333-33");
     medico1.setCrm(322);
 
     let medico2 = new Medico();
-    medico2.setFuncionario(4);
+    medico2.setFuncionario(6);
     medico2.setNome("Gaviã Arqueira");
-    medico2.setCpf("555.555.555-55");
+    medico2.setCpf("555.000.555-55");
     medico2.setCrm(321);
     
     //Pacientes
@@ -87,35 +87,29 @@ namespace hospital{
     hospital.addPacientes(paciente2);
     hospital.addPacientes(paciente3);
 
+    document.getElementById("hospital").textContent = hospital.getNome();
+
     let tabela = document.getElementById("tabelaEnfermeiro");
     let tabela1 = document.getElementById("tabelaMedico");
     let tabela2 = document.getElementById("tabelaPaciente");
 
-    let conteudo = "<tr><th>Enfermeiro</th> <th>Hospital</th></tr>";
+    let conteudo = "<tr> <th>Enfermeiro</th> <th>Hospital</th> </tr>";
     hospital.getEnfermeiros().forEach(element => {
-        conteudo += "<tr><td>"+element.getFuncionario()
-                 +"</td></tr>"+element.getNome()
-                 +"</td></tr>"+element.getCpf()
-                 +"</td></tr>"+element.getCoren()
-                 +"</td></tr>";
+        conteudo += "<tr> <td>"+element.getFuncionario()+"</td> <td>"+element.getNome()
+                 +"</td> <td>"+element.getCpf()+"</td> <td>"+element.getCoren()+"</td> </tr>";
     });
     tabela.innerHTML = conteudo;
 
     let conteudo1 = "<tr><th>Médico</th> <th>Hospital</th></tr>";
     hospital.getMedicos().forEach(element => {
-        conteudo1 += "<tr><td>"+element.getFuncionario()
-                 +"</td></tr>"+element.getNome()
-                 +"</td></tr>"+element.getCpf()
-                 +"</td></tr>"+element.getCrm()
-                 +"</td></tr>";
+        conteudo1 += "<tr> <td>"+element.getFuncionario()+"</td><td>"+element.getNome()
+                 +"</td><td>"+element.getCpf()+"</td><td>"+element.getCrm()+"</td></tr>";
     });
     tabela1.innerHTML = conteudo1;
 
     let conteudo2 = "<tr><th>Paciente</th> <th>Hospital</th></tr>";
     hospital.getPacientes().forEach(element => {
-        conteudo2 += "<tr><td>"+element.getCodPaciente()
-                 +"</td></tr>"+element.getNome()
-                 +"</td></tr>"+element.getCpf()
+        conteudo2 += "<tr><td>"+element.getCodPaciente()+"</td><td>"+element.getNome() +"</td><td>"+element.getCpf()
                  +"</td></tr>";
     });
     tabela2.innerHTML = conteudo2;

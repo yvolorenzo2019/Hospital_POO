@@ -179,14 +179,14 @@ var hospital;
     medico.setCpf("444.444.444-44");
     medico.setCrm(213);
     var medico1 = new hospital_1.Medico();
-    medico1.setFuncionario(4);
+    medico1.setFuncionario(5);
     medico1.setNome("Cassie Lang");
     medico1.setCpf("333.333.333-33");
     medico1.setCrm(322);
     var medico2 = new hospital_1.Medico();
-    medico2.setFuncionario(4);
+    medico2.setFuncionario(6);
     medico2.setNome("Gaviã Arqueira");
-    medico2.setCpf("555.555.555-55");
+    medico2.setCpf("555.000.555-55");
     medico2.setCrm(321);
     //Pacientes
     var paciente = new hospital_1.Paciente();
@@ -224,29 +224,21 @@ var hospital;
     var tabela = document.getElementById("tabelaEnfermeiro");
     var tabela1 = document.getElementById("tabelaMedico");
     var tabela2 = document.getElementById("tabelaPaciente");
-    var conteudo = "<tr><th>Enfermeiro</th> <th>Hospital</th></tr>";
+    var conteudo = "<tr><th>Enfermeiros do Hospital</th></tr>";
     hospital.getEnfermeiros().forEach(function (element) {
-        conteudo += "<tr><td>" + element.getFuncionario()
-            + "</td></tr>" + element.getNome()
-            + "</td></tr>" + element.getCpf()
-            + "</td></tr>" + element.getCoren()
-            + "</td></tr>";
+        conteudo += "<tr> <td>" + element.getFuncionario() + "</td> <td>" + element.getNome()
+            + "</td> <td>" + element.getCpf() + "</td> <td>" + element.getCoren() + "</td> </tr>";
     });
     tabela.innerHTML = conteudo;
-    var conteudo1 = "<tr><th>Médico</th> <th>Hospital</th></tr>";
+    var conteudo1 = "<tr><th>Médicos do Hospital</th></tr>";
     hospital.getMedicos().forEach(function (element) {
-        conteudo1 += "<tr><td>" + element.getFuncionario()
-            + "</td></tr>" + element.getNome()
-            + "</td></tr>" + element.getCpf()
-            + "</td></tr>" + element.getCrm()
-            + "</td></tr>";
+        conteudo1 += "<tr> <td>" + element.getFuncionario() + "</td><td>" + element.getNome()
+            + "</td><td>" + element.getCpf() + "</td><td>" + element.getCrm() + "</td></tr>";
     });
     tabela1.innerHTML = conteudo1;
-    var conteudo2 = "<tr><th>Paciente</th> <th>Hospital</th></tr>";
+    var conteudo2 = "<tr><th>Pacientes do Hospital</th></tr>";
     hospital.getPacientes().forEach(function (element) {
-        conteudo2 += "<tr><td>" + element.getCodPaciente()
-            + "</td></tr>" + element.getNome()
-            + "</td></tr>" + element.getCpf()
+        conteudo2 += "<tr><td>" + element.getCodPaciente() + "</td><td>" + element.getNome() + "</td><td>" + element.getCpf()
             + "</td></tr>";
     });
     tabela2.innerHTML = conteudo2;

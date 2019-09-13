@@ -12,6 +12,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 ///<reference path="funcionario.ts"/>
+///<reference path="pessoa.ts"/>
 var hospital;
 (function (hospital) {
     var Medico = /** @class */ (function (_super) {
