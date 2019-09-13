@@ -1,6 +1,8 @@
 ///<reference path="enfermeiro.ts"/>
+///<reference path="pessoa.ts"/>
 ///<reference path="paciente.ts"/>
 ///<reference path="medico.ts"/>
+///<reference path="hospital.ts"/>
 namespace hospital{
     let hospital = new Hospital();
     hospital.setNome("Stan Lee");
@@ -58,6 +60,67 @@ namespace hospital{
     paciente3.setCodPaciente(3);
     paciente3.setNome("Mercurio");
     paciente3.setCpf("999.999.999-99");
+
+    document.getElementById("codEnfermeiro").textContent = enfermeiro.getFuncionario().toString();
+    document.getElementById("nomeEnfermeiro").textContent = enfermeiro.getNome();
+    document.getElementById("cpfEnfermeiro").textContent = enfermeiro.getCpf();
+    document.getElementById("coren").textContent = enfermeiro.getCoren().toString();
+
+    document.getElementById("codMedico").textContent = medico.getFuncionario().toString();
+    document.getElementById("nomeMedico").textContent = medico.getNome();
+    document.getElementById("cpfMedico").textContent = medico.getCpf();
+    document.getElementById("crm").textContent = medico.getCrm().toString();
+
+    document.getElementById("codPaciente").textContent = paciente.getCodPaciente().toString();
+    document.getElementById("nomePaciente").textContent = paciente.getNome();
+    document.getElementById("cpfPaciente").textContent = paciente.getCpf();
+
+    hospital.addEnfermeiro(enfermeiro);
+    hospital.addEnfermeiro(enfermeiro1);
+    hospital.addEnfermeiro(enfermeiro2);
+
+    hospital.addMedicos(medico);
+    hospital.addMedicos(medico1);
+    hospital.addMedicos(medico2);
+
+    hospital.addPacientes(paciente);
+    hospital.addPacientes(paciente2);
+    hospital.addPacientes(paciente3);
+
+    let tabela = document.getElementById("tabelaEnfermeiro");
+    let tabela1 = document.getElementById("tabelaMedico");
+    let tabela2 = document.getElementById("tabelaPaciente");
+
+    let conteudo = "<tr><th>Enfermeiro</th> <th>Hospital</th></tr>";
+    hospital.getEnfermeiros().forEach(element => {
+        conteudo += "<tr><td>"+element.getFuncionario()
+                 +"</td></tr>"+element.getNome()
+                 +"</td></tr>"+element.getCpf()
+                 +"</td></tr>"+element.getCoren()
+                 +"</td></tr>";
+    });
+    tabela.innerHTML = conteudo;
+
+    let conteudo1 = "<tr><th>Médico</th> <th>Hospital</th></tr>";
+    hospital.getMedicos().forEach(element => {
+        conteudo1 += "<tr><td>"+element.getFuncionario()
+                 +"</td></tr>"+element.getNome()
+                 +"</td></tr>"+element.getCpf()
+                 +"</td></tr>"+element.getCrm()
+                 +"</td></tr>";
+    });
+    tabela1.innerHTML = conteudo1;
+
+    let conteudo2 = "<tr><th>Paciente</th> <th>Hospital</th></tr>";
+    hospital.getPacientes().forEach(element => {
+        conteudo2 += "<tr><td>"+element.getCodPaciente()
+                 +"</td></tr>"+element.getNome()
+                 +"</td></tr>"+element.getCpf()
+                 +"</td></tr>";
+    });
+    tabela2.innerHTML = conteudo2;
+
+
 
 
 }

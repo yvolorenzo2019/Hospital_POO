@@ -1,6 +1,3 @@
-///<reference path="enfermeiro.ts"/>
-///<reference path="paciente.ts"/>
-///<reference path="medico.ts"/>
 namespace hospital{
     export class Hospital{
         private _nome:string;
@@ -34,6 +31,9 @@ namespace hospital{
 
         public addPacientes(paciente:Paciente){
             this._pacientes.push(paciente);
+        }
+        public getPacientes(){
+            return this._pacientes;
         }
 
     }

@@ -1,4 +1,5 @@
 ///<reference path="funcionario.ts"/>
+///<reference path="pessoa.ts"/>
 namespace hospital{
     export class Medico extends Funcionario {
         private _crm:number;
