@@ -1,79 +1,122 @@
-///<reference path="enfermeiro.ts"/>
 ///<reference path="pessoa.ts"/>
 ///<reference path="paciente.ts"/>
 ///<reference path="medico.ts"/>
+///<reference path="enfermeiro.ts"/>
 ///<reference path="hospital.ts"/>
+///<reference path="prontoSocorro.ts"/>
 namespace hospital{
+    //Instanciando Classe;
+
+    //Hospitais
     let hospital = new Hospital();
-    hospital.setNome("Stan Lee");
-    
-    // Enfermeiros 
-    let enfermeiro = new Enfermeiro();
-    enfermeiro.setFuncionario(1);
-    enfermeiro.setNome("Wiccano");
-    enfermeiro.setCpf("000.000.000-00");
-    enfermeiro.setCoren(300000);
+    hospital.setNome("Hospital vera cruz");
 
-    let enfermeiro1 = new Enfermeiro();
-    enfermeiro1.setFuncionario(2);
-    enfermeiro1.setNome("Billy");
-    enfermeiro1.setCpf("111.111.111-11");
-    enfermeiro1.setCoren(3434333);
+    let hospital1 = new Hospital();
+    hospital1.setNome("Hospital regina maria");
 
-    let enfermeiro2 = new Enfermeiro();
-    enfermeiro2.setFuncionario(3);
-    enfermeiro2.setNome("Célere");
-    enfermeiro2.setCpf("222.222.222-22");
-    enfermeiro2.setCoren(1234333);
+    let hospital2 = new Hospital();
+    hospital2.setNome("Hospital agenor");
 
-    // Medicos 
-    let medico = new Medico();
-    medico.setFuncionario(4);
-    medico.setNome("Hulking");
-    medico.setCpf("444.444.444-44");
-    medico.setCrm(213);
+    // criando o codigo de funcionario
+    /**let funcionario = new Funcionario();
+    *funcionario.setCodFuncionario(1);
 
-    let medico1 = new Medico();
-    medico1.setFuncionario(5);
-    medico1.setNome("Cassie Lang");
-    medico1.setCpf("333.333.333-33");
-    medico1.setCrm(322);
+    *let funcionario1 = new Funcionario();
+    *funcionario1.setCodFuncionario(2);
 
-    let medico2 = new Medico();
-    medico2.setFuncionario(6);
-    medico2.setNome("Gaviã Arqueira");
-    medico2.setCpf("555.000.555-55");
-    medico2.setCrm(321);
-    
+    let funcionario2 = new Funcionario();
+    funcionario2.setCodFuncionario(3);*/
+
     //Pacientes
     let paciente = new Paciente();
     paciente.setCodPaciente(1);
-    paciente.setNome("Magneto");
-    paciente.setCpf("666.666.666-66");
+    paciente.setNome('luiz');
+    paciente.setCpf('111.111.111-11');
+    paciente.setHospital(hospital);
+    paciente.setSetor("emergencial");
+
+    let paciente1 = new Paciente();
+    paciente1.setCodPaciente(2);
+    paciente1.setNome('vini');
+    paciente1.setCpf('222.222.222-22');
+    paciente1.setHospital(hospital1);
+    paciente1.setSetor("cirurgico");
 
     let paciente2 = new Paciente();
-    paciente2.setCodPaciente(2);
-    paciente2.setNome("Wanda");
-    paciente2.setCpf("888.888.888-88");
+    paciente2.setCodPaciente(3);
+    paciente2.setNome('yvo');
+    paciente2.setCpf('333.333.333-33');
+    paciente2.setHospital(hospital2);
+    paciente2.setSetor("recepção");
 
-    let paciente3 = new Paciente();
-    paciente3.setCodPaciente(3);
-    paciente3.setNome("Mercurio");
-    paciente3.setCpf("999.999.999-99");
+    //Enfermeiros
+    let enfermeiro = new Enfermeiro();
+    enfermeiro.setCoren(273485);
+    enfermeiro.setNome('jorge');
+    enfermeiro.setCpf('555.555.555-54');
+    enfermeiro.setHospital(hospital);
+    enfermeiro.setCodFuncionario(1);
+    enfermeiro.setSetor("cirurgião");
 
-    document.getElementById("codEnfermeiro").textContent = enfermeiro.getFuncionario().toString();
-    document.getElementById("nomeEnfermeiro").textContent = enfermeiro.getNome();
-    document.getElementById("cpfEnfermeiro").textContent = enfermeiro.getCpf();
-    document.getElementById("coren").textContent = enfermeiro.getCoren().toString();
+    let enfermeiro1 = new Enfermeiro();
+    enfermeiro1.setCoren(273485);
+    enfermeiro1.setNome('joaquim');
+    enfermeiro1.setCpf('765.765.765-67');
+    enfermeiro1.setHospital(hospital1);
+    enfermeiro1.setCodFuncionario(2);
+    enfermeiro1.setSetor("socorrista");
+    
+    let enfermeiro2 = new Enfermeiro();
+    enfermeiro2.setCoren(273485);
+    enfermeiro2.setNome('carlos');
+    enfermeiro2.setCpf('434.434.434-33');
+    enfermeiro2.setHospital(hospital2);
+    enfermeiro2.setCodFuncionario(3);
+    enfermeiro2.setSetor("socorrista");
 
-    document.getElementById("codMedico").textContent = medico.getFuncionario().toString();
-    document.getElementById("nomeMedico").textContent = medico.getNome();
-    document.getElementById("cpfMedico").textContent = medico.getCpf();
-    document.getElementById("crm").textContent = medico.getCrm().toString();
+    //Médicos
+    let medico = new Medico();
+    medico.setEspecialidade(2);
+    medico.setCrm(1348623);
+    medico.setNome('marcos');
+    medico.setCpf('886.886.886-11');
+    medico.setHospital(hospital);
+    medico.setCodFuncionario(1);
 
-    document.getElementById("codPaciente").textContent = paciente.getCodPaciente().toString();
-    document.getElementById("nomePaciente").textContent = paciente.getNome();
-    document.getElementById("cpfPaciente").textContent = paciente.getCpf();
+    let medico1 = new Medico();
+    medico1.setEspecialidade(4);
+    medico1.setCrm(9846545);
+    medico1.setNome('joão');
+    medico1.setCpf('222.222.222-21');
+    medico1.setHospital(hospital1);
+    medico1.setCodFuncionario(2);
+
+    let medico2 = new Medico();
+    medico2.setEspecialidade(2);
+    medico2.setCrm(2311254);
+    medico2.setNome('evandro');
+    medico2.setCpf('112.112.112-12');
+    medico2.setHospital(hospital2);
+    medico2.setCodFuncionario(3);
+
+
+    //instancias de pronto socorro
+    let prontoSocorro = new ProntoSocorro();
+    prontoSocorro.setCodProntoSocorro(1);
+    prontoSocorro.setEndereco("rua bergamota, 222, Vila velha");
+
+    let prontoSocorro1 = new ProntoSocorro();
+    prontoSocorro1.setCodProntoSocorro(2);
+    prontoSocorro1.setEndereco("av velha morte, 112, Vila velha");
+
+    let prontoSocorro2 = new ProntoSocorro();
+    prontoSocorro2.setCodProntoSocorro(3);
+    prontoSocorro2.setEndereco("av nova esperança, 5555, Esperança");
+
+    //Adicionar membros ao hospital
+    hospital.addPaciente(paciente);
+    hospital.addPaciente(paciente1);
+    hospital.addPaciente(paciente2);
 
     hospital.addEnfermeiro(enfermeiro);
     hospital.addEnfermeiro(enfermeiro1);
@@ -83,38 +126,47 @@ namespace hospital{
     hospital.addMedicos(medico1);
     hospital.addMedicos(medico2);
 
-    hospital.addPacientes(paciente);
-    hospital.addPacientes(paciente2);
-    hospital.addPacientes(paciente3);
+    hospital.addProntoSocorro(prontoSocorro);
+    hospital.addProntoSocorro(prontoSocorro1);
+    hospital.addProntoSocorro(prontoSocorro2);
 
-    document.getElementById("hospital").textContent = hospital.getNome();
+    let tabPaciente = document.getElementById('paciente');
 
-    let tabela = document.getElementById("tabelaEnfermeiro");
-    let tabela1 = document.getElementById("tabelaMedico");
-    let tabela2 = document.getElementById("tabelaPaciente");
+    let conteudo = "<tr> <td>Hospital</td> <td>Código</td> <td>Nome</td> <td>CPF</td> </tr>";
 
-    let conteudo = "<tr> <th>Enfermeiro</th> <th>Hospital</th> </tr>";
-    hospital.getEnfermeiros().forEach(element => {
-        conteudo += "<tr> <td>"+element.getFuncionario()+"</td> <td>"+element.getNome()
-                 +"</td> <td>"+element.getCpf()+"</td> <td>"+element.getCoren()+"</td> </tr>";
-    });
-    tabela.innerHTML = conteudo;
+    hospital.getPaciente().forEach(element => {
+        conteudo += "<tr> <td>" + element.getHospital().getNome() + "</td> <td>" + element.getCodPaciente() + "</td> <td>" + element.getNome() + "</td> <td>" + element.getCpf() + "</td> </tr>";
+    })
 
-    let conteudo1 = "<tr><th>Médico</th> <th>Hospital</th></tr>";
+    tabPaciente.innerHTML = conteudo;
+
+    let tabEnfermeiro = document.getElementById('enfermeiro');
+
+    let conteudo2 = "<tr> <td>Hospital</td> <td>Código</td> <td>Nome</td> <td>CPF</td> <td>Coren</td> </tr>";
+
+    hospital.getEnfermeiro().forEach(element => {
+        conteudo2 += "<tr> <td>" + element.getHospital().getNome() + "</td> <td>" + element.getCodFuncionario() + "</td> <td>" + element.getNome() + "</td> <td>" + element.getCpf() + "</td> <td>" + element.getCoren() + "</td> </tr>";
+    })
+
+    tabEnfermeiro.innerHTML = conteudo2;
+
+    let tabMedico = document.getElementById('medico');
+
+    let conteudo3 = "<tr> <td>Hospital</td> <td>Código</td> <td>Nome</td> <td>CPF</td> <td>CRM</td> <td>Especialidade</td> </tr>";
+
     hospital.getMedicos().forEach(element => {
-        conteudo1 += "<tr> <td>"+element.getFuncionario()+"</td><td>"+element.getNome()
-                 +"</td><td>"+element.getCpf()+"</td><td>"+element.getCrm()+"</td></tr>";
+        conteudo3 += "<tr> <td>" + element.getHospital().getNome() + "</td> <td>" + element.getCodFuncionario() + "</td> <td>" + element.getNome() + "</td> <td>" + element.getCpf() + "</td> <td>" + element.getCrm() + "</td> <td>" + element.getEspecialidade() + "</td> </tr>";
+    })
+
+    tabMedico.innerHTML = conteudo3;
+
+    let tabProntoSocorro = document.getElementById('prontoSocorro');
+
+    let conteudo4 = "<tr> <td>codigo </td> <td> endereço </td> </tr>";
+
+    hospital.getProntoSocorro().forEach(element =>{
+        conteudo4 += "<tr> <td>" + element.getCodProntoSocorro() + "</td><td>" + element.getEndereco() + "</td></tr>";
     });
-    tabela1.innerHTML = conteudo1;
 
-    let conteudo2 = "<tr><th>Paciente</th> <th>Hospital</th></tr>";
-    hospital.getPacientes().forEach(element => {
-        conteudo2 += "<tr><td>"+element.getCodPaciente()+"</td><td>"+element.getNome() +"</td><td>"+element.getCpf()
-                 +"</td></tr>";
-    });
-    tabela2.innerHTML = conteudo2;
-
-
-
-
+    tabProntoSocorro.innerHTML = conteudo4;
 }

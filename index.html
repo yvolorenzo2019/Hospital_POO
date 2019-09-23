@@ -1,89 +1,63 @@
 <!DOCTYPE html>
-<html>
-    <title>Hospital</title> 
-    <head></head>
-    <body background="a.jpg">
-        <h1 style="text-align:center; background-color: grey; border-radius: 30px; color: white; font-size: 35px; width: 50%; margin-left: 25%;">Hospital</h1>
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-12">
-                      <table class="table">
-                          <tr>
-                                <th>Código</th>
-                                <th>Nome</th>
-                                <th>CPF</th>
-                                <th>COREN</th>
-                          </tr>
-                          <tr>
-                            <td id="codMedico"></td>
-                            <td id="nomeMedico"></td>
-                            <td id="cpfMedico"></td>
-                            <td id="crm"></td>
-                        </tr>
-                      </table>
-                      
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Document</title>
+</head>
+<body  style=" background-image: url(a.jpeg); background-repeat: no-repeat;background-size: 120%">
+    <div class="container">
+        <div class="row">
+            <h1>Hospital</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table id="paciente">  
+                    
+                </table>
 
-                  </div>
-              </div>
-              <div class="row">
-                    <div class="col-md-12">
-                        <table class="table" >
-                            <tr>
-                                <th>Código</th>
-                                <th>Nome</th>
-                                <th>CPF</th>
-                                <th>COREN</th>
-                            </tr>
-                            <tr>
-                                <td id="codEnfermeiro"></td>
-                                <td id="nomeEnfermeiro"></td>
-                                <td id="cpfEnfermeiro"></td>
-                                <td id="coren"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-              
-                <div class="row">
-                        <div class="col-md-12" >
-                            <table class="table">
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Nome</th>
-                                    <th>CPF</th>
-                                </tr>
-                                <tr>
-                                    <td id="codPaciente"></td>
-                                    <td id="nomePaciente"></td>
-                                    <td id="cpfPaciente"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-12">
-                              <table class="table" id="tabelaPaciente">
-        
-                              </table>
-                            </div>
-                  </div>
-                  <div class="row">
-                        <div class="col-md-12">
-                          <table class="table"id="tabelaEnfermeiro">
-    
-                          </table>
-                        </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-12">
-                              <table class="table" id="tabelaMedico">
-  
-                              </table>
-                            </div>
-                    </div>
-          </div>
-    </body>
+                <table id="enfermeiro">
+                    
+                </table>
+
+                <table id="medico">
+                    
+                </table>
+
+                <table id="prontoSocorro">
+                    
+                </table>
+
+            </div>
+        </div>
+        <div class="row">
+                <h1 id="titulo2">Yvo & Caue </h1>
+            </div>
+    </div>
     <script src="tudo.js"></script>
+</body>
 </html>
-
-
+<style>
+   td{
+       color: white;
+       font-size: 28px;
+       background-color: rgba(133, 10, 10, 0.678);
+       border-radius: 60px;
+       text-align: center;
+       border-style: none;
+       box-shadow: inset 0 0 1em rgba(133, 10, 10, 0.678), 0 0 1em red;
+   }
+   h1{
+       text-align: center;
+       color: white;
+       background-color: rgba(133, 10, 10, 0.678);
+       box-shadow: inset 0 0 1em rgba(133, 10, 10, 0.678), 0 0 1em red;
+   }
+   #titulo2{
+       text-align: center;
+       background-color: ;
+   }
+</style>

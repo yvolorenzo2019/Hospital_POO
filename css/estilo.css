@@ -1,0 +1,15 @@
+table{
+    margin-top: 6%;
+    margin-left: auto;
+    margin-right: auto;
+}
+th{
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+td{
+    padding: 10px;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
